@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miguel Castro | About</title>
+  <meta name="description" content="About Miguel Castro, Creative Director and senior creative partner." />
+  <link rel="canonical" href="https://private.miguelcastro.works/about" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta property="og:title" content="Miguel Castro | About" />
+  <meta property="og:description" content="Creative Director and senior creative partner working between concept, strategy, narrative and technology-shaped ideas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://private.miguelcastro.works/about" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --black: #1A1A1A;
+      --white: #ffffff;
+      --n950: #0a0a0a;
+      --n600: #525252;
+      --n500: #737373;
+      --n400: #a3a3a3;
+      --n300: #d4d4d4;
+      --n200: #e5e5e5;
+      --max: 1280px;
+      --gutter: 24px;
+      --gap: 24px;
+      --lh: 1.25;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--white);
+      color: var(--n950);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    ::selection { background: var(--black); color: white; }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; }
+    p, h1, h2, h3, h4 { margin: 0; }
+
+    .grid {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: var(--gap);
+    }
+
+    .label,
+    .text-12,
+    .text-14,
+    .brand-name,
+    .brand-role,
+    .nav,
+    .clock,
+    .footer-copy,
+    .footer-links,
+    .row-label,
+    .row-text,
+    .row-meta,
+    a,
+    span {
+      line-height: var(--lh);
+      letter-spacing: -0.01em;
+    }
+
+    .label,
+    .text-12,
+    .brand-name,
+    .brand-role,
+    .nav,
+    .clock,
+    .footer-copy,
+    .footer-links,
+    .row-label,
+    .row-text,
+    .row-meta {
+      font-size: 12px;
+    }
+
+    .text-14 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .label { color: var(--n500); }
+    .soft { color: var(--n600); }
+    .muted { color: var(--n500); }
+    .quiet { color: var(--n400); }
+
+    .micro-link {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      background-position: 0 100%;
+      transition: color 160ms ease, background-size 160ms ease;
+    }
+
+    .micro-link:hover,
+    .micro-link:focus-visible {
+      color: var(--black);
+      background-size: 100% 1px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 1px solid currentColor;
+      outline-offset: 3px;
+    }
+
+    header { border-bottom: 1px solid var(--n200); }
+
+    .header-grid {
+      align-items: start;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .brand {
+      grid-column: span 3;
+      align-self: start;
+    }
+
+    .brand-name { display: block; }
+
+    .brand-role {
+      display: block;
+      margin-top: 2px;
+      color: var(--n500);
+    }
+
+    .clock {
+      grid-column: 5 / span 3;
+      align-self: start;
+      color: var(--n500);
+    }
+
+    .clock-sub {
+      margin-top: 2px;
+      color: var(--n400);
+    }
+
+    .clock:hover .clock-default { display: none; }
+    .clock:hover .clock-hover { display: inline; }
+    .clock-hover { display: none; }
+
+    .nav {
+      grid-column: 9 / span 4;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      color: var(--n500);
+    }
+
+    .nav a,
+    .nav span {
+      display: inline-flex;
+      align-items: center;
+      height: calc(12px * var(--lh));
+    }
+
+    .nav-sep { color: var(--n300); }
+
+    .section-rule {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .section-rule::before {
+      content: "";
+      display: block;
+      border-top: 1px solid var(--n200);
+      transform: translateX(-100%);
+      transition: transform 500ms ease-out;
+      will-change: transform;
+    }
+
+    .section-rule.is-visible::before { transform: translateX(0); }
+
+    @keyframes settleIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes clockCrossfade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .clock-crossfade { animation: clockCrossfade 360ms ease-out both; }
+
+    .settle-1 { animation: settleIn 520ms ease-out both 80ms; }
+    .settle-2 { animation: settleIn 520ms ease-out both 180ms; }
+    .settle-3 { animation: settleIn 520ms ease-out both 280ms; }
+
+    .hero .grid {
+      position: relative;
+      min-height: 48vh;
+      align-content: end;
+      row-gap: 24px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    .hero .statement { grid-column: 4 / span 4; }
+    .hero .support { grid-column: 8 / span 4; }
+
+    .hero-portrait {
+      position: absolute;
+      left: var(--gutter);
+      top: 64px;
+      width: calc(((100% - (var(--gutter) * 2) - (var(--gap) * 11)) / 12) * 2 + var(--gap));
+      aspect-ratio: 4 / 5;
+      display: block;
+      object-fit: cover;
+      filter: grayscale(1);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms ease;
+    }
+
+    .hero:hover .hero-portrait,
+    .hero:focus-within .hero-portrait,
+    .hero.is-portrait-visible .hero-portrait {
+      opacity: 1;
+    }
+
+    .section .grid {
+      row-gap: 32px;
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+
+    .section .label-wrap { grid-column: span 2; }
+    .section .main { grid-column: 4 / span 4; }
+    .section .secondary { grid-column: 8 / span 4; }
+    .section .side { grid-column: 8 / span 4; }
+
+    .rows {
+      grid-column: 4 / span 7;
+      display: grid;
+      row-gap: 0;
+    }
+
+    .row {
+      border-top: 1px solid var(--n200);
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    #experience .row:first-child,
+    #education .row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    #experience .row:last-child,
+    #education .row:last-child {
+      padding-bottom: 0;
+    }
+
+    .row-label { color: var(--n950); }
+    .row-text { margin-top: 6px; color: var(--n600); }
+    .row-meta { margin-top: 6px; color: var(--n500); }
+
+    footer .grid {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    .footer-copy {
+      grid-column: span 3;
+      color: var(--n500);
+    }
+
+    .footer-links {
+      grid-column: 8 / span 5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 20px;
+      color: var(--n500);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      :root { --gutter: 24px; --gap: 24px; }
+
+      .header-grid {
+        padding-top: 24px;
+        padding-bottom: 0;
+      }
+
+      .brand { grid-column: span 12; }
+      .clock { display: none; }
+
+      .mobile-header-line {
+        grid-column: span 12;
+        margin-left: calc(var(--gutter) * -1);
+        margin-right: calc(var(--gutter) * -1);
+        margin-top: 20px;
+        border-top: 1px solid var(--n200);
+      }
+
+      .nav {
+        grid-column: span 12;
+        justify-content: flex-start;
+        min-height: 44px;
+      }
+
+      .hero .grid {
+        min-height: 58vh;
+        row-gap: 40px;
+      }
+
+      .hero .statement,
+      .hero .support,
+      .section .label-wrap,
+      .section .main,
+      .section .secondary,
+      .section .side,
+      .rows {
+        grid-column: span 12;
+      }
+
+      .hero-portrait {
+        display: block;
+        left: var(--gutter);
+        top: 56px;
+        width: calc(((100% - (var(--gutter) * 2) - (var(--gap) * 11)) / 12) * 3 + var(--gap) * 2);
+      }
+
+      .row-text,
+      .row-meta {
+        margin-top: 6px;
+      }
+
+      .footer-copy { grid-column: span 12; }
+      .footer-links {
+        grid-column: span 12;
+        justify-content: flex-start;
+        margin-top: 3px;
+      }
+    }
+
+    @media (max-width: 639px) {
+      :root { --gutter: 16px; --gap: 16px; }
+
+      .header-grid { padding-top: 20px; }
+      .mobile-header-line { margin-top: 20px; }
+
+      .hero .grid {
+        min-height: 60vh;
+        row-gap: 40px;
+        padding-top: 56px;
+        padding-bottom: 48px;
+      }
+
+      .hero-portrait {
+        display: block;
+        top: 56px;
+        width: calc(((100% - (var(--gutter) * 2) - (var(--gap) * 11)) / 12) * 4 + var(--gap) * 3);
+      }
+
+      .section .grid {
+        row-gap: 40px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+
+      .row {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      footer .grid {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="grid header-grid">
+      <a href="/" class="brand settle-1">
+        <span class="brand-name">Miguel Castro</span>
+        <span class="brand-role">Creative Director</span>
+      </a>
+
+      <div class="clock settle-2" id="world-clock">
+        <p id="clock-main" class="clock-crossfade">New York 00:00</p>
+        <p class="clock-sub">
+          <span class="clock-default">Time matters</span>
+          <span class="clock-hover">Available across time zones</span>
+        </p>
+      </div>
+
+      <div class="mobile-header-line"></div>
+
+      <nav aria-label="Primary navigation" class="nav settle-3">
+        <a class="micro-link" href="/#cases">Proof</a>
+        <span class="nav-sep">|</span>
+        <a class="micro-link" href="/#ways">Bring Me In</a>
+        <span class="nav-sep">|</span>
+        <a class="micro-link" href="/about" aria-current="page">About</a>
+        <span class="nav-sep">|</span>
+        <a class="micro-link" href="mailto:miguel@miguelcastro.cc">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="grid">
+        <div class="statement settle-2">
+          <h1 class="text-14">I learned to make work when the rules had not been written yet.</h1>
+        </div>
+
+        <div class="support settle-3">
+          <p class="text-12 soft">From Miami and New York to Lima, the work has stayed the same: find what others miss, give it shape and make it useful enough to travel.</p>
+        </div>
+
+        <img class="hero-portrait" src="/portrait.png" alt="Miguel Castro" loading="lazy" />
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+
+    <section class="section" id="profile">
+      <div class="grid">
+        <div class="label-wrap">
+          <p class="label">Profile</p>
+        </div>
+
+        <div class="main">
+          <p class="text-14">I work from problems that do not quite add up: things others have walked past, openings that are not obvious until you stay with them.</p>
+        </div>
+
+        <div class="secondary">
+          <p class="text-12 soft">My work as a creative leader is to make it easier for good ideas to show up, and harder for them to get lost. Raising the bar. Protecting the craft. Organizing teams around something worth building.</p>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+
+    <section class="section" id="way-of-thinking">
+      <div class="grid">
+        <div class="label-wrap">
+          <p class="label">Way of Thinking</p>
+        </div>
+
+        <div class="main">
+          <p class="text-14">Reading between the lines of a brief. Cutting to what matters. Keeping standards under pressure.</p>
+        </div>
+
+        <div class="secondary">
+          <p class="text-12 soft">The work is not only making things look intelligent. It is making something previously unclear easier to understand, use or feel.</p>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+
+    <section class="section" id="experience">
+      <div class="grid">
+        <div class="label-wrap">
+          <p class="label">Experience</p>
+        </div>
+
+        <div class="rows">
+          <div class="row"><p class="row-label">Garnier Agency</p><p class="row-meta">General Creative Director · April 2025 to April 2026 · Lima, Peru</p><p class="row-text">Led the creative operation in Lima, raising the regional creative standard and strengthening the team’s judgment.</p></div>
+          <div class="row"><p class="row-label">VML</p><p class="row-meta">Senior Creative Director · December 2021 to April 2025 · Lima, Peru</p><p class="row-text">Pushed ideas further, kept the craft honest and helped work survive tight deadlines, long meetings and creeping doubt.</p></div>
+          <div class="row"><p class="row-label">Freelance</p><p class="row-meta">Creative Consultant · December 2019 to December 2021 · Lima, Peru</p><p class="row-text">Worked with agencies and brands on strategy, creativity, narrative and idea development, close to the center of projects.</p></div>
+          <div class="row"><p class="row-label">True</p><p class="row-meta">Associate Creative Director · January 2016 to December 2019 · Lima, Peru</p><p class="row-text">Led brand platforms, integrated campaigns and content for clients including Adidas and Citroën.</p></div>
+          <div class="row"><p class="row-label">MullenLowe Group</p><p class="row-meta">General Creative Director · November 2014 to November 2015 · Lima, Peru</p><p class="row-text">Led a team of over 35 people during a period of internal change and competitive pressure.</p></div>
+          <div class="row"><p class="row-label">Liquid Digital Agency</p><p class="row-meta">Executive Creative Director · January 2014 to December 2014 · Lima, Peru</p><p class="row-text">Led a team of over 50 people for clients including PepsiCo, BBVA and Claro.</p></div>
+          <div class="row"><p class="row-label">Wunderman</p><p class="row-meta">Creative Director · January 2010 to December 2013 · Lima, Peru</p><p class="row-text">Led the creative and digital transformation of Movistar, changing how people thought about the brand.</p></div>
+          <div class="row"><p class="row-label">AKQA</p><p class="row-meta">Copywriter · January 2006 to December 2009 · New York, USA</p><p class="row-text">Worked on Nike+, Visa and USPS, learning that creativity did not have to stop at communication.</p></div>
+          <div class="row"><p class="row-label">Crispin Porter + Bogusky</p><p class="row-meta">Copywriter · January 2004 to December 2006 · Miami, USA</p><p class="row-text">One of the agency’s first interactive copywriters, creating without a manual while the rules were still being written.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+
+    <section class="section" id="education">
+      <div class="grid">
+        <div class="label-wrap"><p class="label">Education</p></div>
+
+        <div class="rows">
+          <div class="row"><p class="row-label">Royal College of Art</p><p class="row-text">Creative Leadership</p><p class="row-meta">London, UK<br />2021</p></div>
+          <div class="row"><p class="row-label">Central Saint Martins, UAL</p><p class="row-text">Creative Direction</p><p class="row-meta">London, UK<br />2020</p></div>
+          <div class="row"><p class="row-label">Miami Ad School</p><p class="row-text">Portfolio Program: Copywriting + Design</p><p class="row-meta">Miami, USA<br />2004 to 2007</p></div>
+          <div class="row"><p class="row-label">Universidad San Ignacio de Loyola</p><p class="row-text">Communications</p><p class="row-meta">Lima, Peru<br />1999 to 2003</p></div>
+          <div class="row"><p class="row-label">Markham College</p><p class="row-text">Cambridge IGCSE</p><p class="row-meta">Lima, Peru<br />1986 to 1998</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-rule"></div>
+
+    <section class="section" id="working-with-me">
+      <div class="grid">
+        <div class="label-wrap"><p class="label">Working With Me</p></div>
+        <div class="main"><p class="text-14">Bring me in when the idea is good, but still needs help behaving.</p></div>
+        <div class="secondary"><p class="text-12 soft">I am useful when there is a tension to find, a case to build, a technical idea to make human, or a fragile creative direction that needs protection from meetings, doubt and very reasonable people.</p></div>
+        
+      </div>
+    </section>
+  </main>
+
+  <div class="section-rule"></div>
+
+  <footer id="contact">
+    <div class="grid footer">
+      <p class="footer-copy">Miguel Castro @2026</p>
+
+      <div class="footer-links">
+        <a class="micro-link" href="mailto:miguel@miguelcastro.cc">Contact</a>
+        <a class="micro-link" href="https://www.linkedin.com/in/miguelcastroe/" rel="noopener">LinkedIn</a>
+        <a class="micro-link" href="https://miguelcastro.works/" rel="noopener">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setUpHeroPortrait() {
+      const hero = document.querySelector(".hero");
+      if (!hero) return;
+
+      const isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+      if (!isTouch) return;
+
+      hero.addEventListener("click", () => {
+        hero.classList.toggle("is-portrait-visible");
+      });
+    }
+
+    function setUpClock() {
+      const cities = [
+        { label: "New York", timeZone: "America/New_York" },
+        { label: "Miami", timeZone: "America/New_York" },
+        { label: "Los Angeles", timeZone: "America/Los_Angeles" },
+        { label: "San José", timeZone: "America/Costa_Rica" },
+        { label: "Mexico City", timeZone: "America/Mexico_City" },
+        { label: "São Paulo", timeZone: "America/Sao_Paulo" },
+        { label: "London", timeZone: "Europe/London" },
+        { label: "Madrid", timeZone: "Europe/Madrid" },
+        { label: "Tokyo", timeZone: "Asia/Tokyo" }
+      ];
+
+      const clock = document.getElementById("clock-main");
+      if (!clock) return;
+
+      let cityIndex = 0;
+
+      function getCityTime(city) {
+        return new Intl.DateTimeFormat("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZone: city.timeZone
+        }).format(new Date());
+      }
+
+      function renderClock(animate = true) {
+        const city = cities[cityIndex];
+        const nextText = `${city.label} ${getCityTime(city)}`;
+
+        if (clock.textContent === nextText) return;
+
+        if (!animate) {
+          clock.textContent = nextText;
+          return;
+        }
+
+        clock.classList.remove("clock-crossfade");
+        void clock.offsetWidth;
+        clock.textContent = nextText;
+        clock.classList.add("clock-crossfade");
+      }
+
+      renderClock(false);
+
+      setInterval(() => {
+        cityIndex = (cityIndex + 1) % cities.length;
+        renderClock(true);
+      }, 3000);
+    }
+
+    function setUpSectionRules() {
+      const rules = document.querySelectorAll(".section-rule");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      rules.forEach((rule) => observer.observe(rule));
+    }
+
+    setUpHeroPortrait();
+    setUpClock();
+    setUpSectionRules();
+  </script>
+</body>
+</html>
