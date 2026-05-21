@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miguel Castro | Private Practice</title>
+  <meta name="description" content="Miguel Castro is a senior creative partner for the distance between a strong idea and a real one." />
+  <link rel="canonical" href="https://private.miguelcastro.works/" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Miguel Castro | Private Practice" />
+  <meta property="og:description" content="For the distance between a strong idea and a real one." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://private.miguelcastro.works/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://player.vimeo.com" />
+  <link rel="preconnect" href="https://i.vimeocdn.com" />
+
+  <style>
+    :root {
+      --black: #1A1A1A;
+      --white: #ffffff;
+      --n950: #0a0a0a;
+      --n900: #171717;
+      --n600: #525252;
+      --n500: #737373;
+      --n400: #a3a3a3;
+      --n300: #d4d4d4;
+      --n200: #e5e5e5;
+      --n100: #f5f5f5;
+      --max: 1280px;
+      --gutter: 24px;
+      --gap: 24px;
+      --lh: 1.25;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--white);
+      color: var(--n950);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    ::selection { background: var(--black); color: white; }
+
+    a { color: inherit; text-decoration: none; }
+
+    button {
+      font: inherit;
+      color: inherit;
+    }
+
+    p, h1, h2, h3, h4 {
+      margin: 0;
+    }
+
+    sup {
+      position: relative;
+      top: -0.35em;
+      font-size: 0.7em;
+      line-height: 0;
+    }
+
+    .grid {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: var(--gap);
+    }
+
+    .label,
+    .text-12,
+    .text-14,
+    .brand-name,
+    .brand-role,
+    .nav,
+    .clock,
+    .case-number,
+    .case-title,
+    .recognition,
+    .recognition p,
+    .way-title,
+    .way-text,
+    .footer-copy,
+    .footer-links,
+    a,
+    span,
+    button {
+      line-height: var(--lh);
+      letter-spacing: -0.01em;
+    }
+
+    .label,
+    .text-12,
+    .brand-name,
+    .brand-role,
+    .nav,
+    .clock,
+    .case-number,
+    .recognition,
+    .way-text,
+    .footer-copy,
+    .footer-links {
+      font-size: 12px;
+    }
+
+    .text-14,
+    .case-title,
+    .way-title {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .label {
+      color: var(--n500);
+    }
+
+    .micro-link {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      background-position: 0 100%;
+      transition: color 160ms ease, background-size 160ms ease;
+    }
+
+    .micro-link:hover,
+    .micro-link:focus-visible {
+      color: var(--black);
+      background-size: 100% 1px;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 1px solid currentColor;
+      outline-offset: 3px;
+    }
+
+    .section-rule {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .section-rule::before {
+      content: "";
+      display: block;
+      border-top: 1px solid var(--n200);
+      transform: translateX(-100%);
+      transition: transform 500ms ease-out;
+      will-change: transform;
+    }
+
+    .section-rule.is-visible::before {
+      transform: translateX(0);
+    }
+
+    @keyframes settleIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes clockCrossfade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .settle-1 { animation: settleIn 520ms ease-out both 80ms; }
+    .settle-2 { animation: settleIn 520ms ease-out both 180ms; }
+    .settle-3 { animation: settleIn 520ms ease-out both 280ms; }
+    .clock-crossfade { animation: clockCrossfade 360ms ease-out both; }
+
+    header {
+      border-bottom: 1px solid var(--n200);
+    }
+
+    .header-grid {
+      align-items: start;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .brand {
+      grid-column: span 3;
+      align-self: start;
+    }
+
+    .brand-name {
+      display: block;
+    }
+
+    .brand-role {
+      display: block;
+      margin-top: 2px;
+      color: var(--n500);
+    }
+
+    .clock {
+      grid-column: 5 / span 3;
+      align-self: start;
+      color: var(--n500);
+    }
+
+    .clock-sub {
+      margin-top: 2px;
+      color: var(--n400);
+    }
+
+    .clock:hover .clock-default { display: none; }
+    .clock:hover .clock-hover { display: inline; }
+    .clock-hover { display: none; }
+
+    .nav {
+      grid-column: 9 / span 4;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      color: var(--n500);
+    }
+
+    .nav a,
+    .nav span {
+      display: inline-flex;
+      align-items: center;
+      height: calc(12px * var(--lh));
+    }
+
+    .nav .active {
+      color: var(--black);
+    }
+
+    .nav-sep {
+      color: var(--n300);
+    }
+
+    #top .grid {
+      min-height: 76vh;
+      align-content: end;
+      row-gap: 48px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    #top .label-wrap { grid-column: span 2; }
+    #top .hero-line { grid-column: 4 / span 3; }
+    #top .modes { grid-column: 8 / span 2; color: var(--n600); }
+    #top .description { grid-column: 10 / span 3; color: var(--n600); }
+
+    #signal .grid {
+      row-gap: 48px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    #signal .label-wrap { grid-column: span 2; }
+    #signal .signal-line { grid-column: 4 / span 3; }
+    #signal .signal-note { grid-column: 11 / span 2; color: var(--n600); }
+
+    #cases {
+      transition: background-color 300ms ease;
+    }
+
+    #cases.theater {
+      background: var(--black);
+    }
+
+    #cases.theater #cases-normal { display: none !important; }
+    #cases:not(.theater) #cases-theater { display: none !important; }
+
+    .proof-grid {
+      row-gap: 32px;
+      padding-top: 56px;
+      padding-bottom: 32px;
+    }
+
+    .proof-label { grid-column: span 2; }
+
+    .case-list {
+      grid-column: span 12;
+      display: grid;
+      row-gap: 48px;
+    }
+
+    .case-row {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: var(--gap);
+      row-gap: 32px;
+      min-height: 32vh;
+      color: var(--n950);
+    }
+
+    .case-text {
+      grid-column: 1 / span 5;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      column-gap: var(--gap);
+      padding-top: 16px;
+    }
+
+    .case-number {
+      grid-column: span 1;
+      color: var(--n500);
+      transition: color 160ms ease;
+    }
+
+    .case-row.is-active .case-number {
+      color: var(--black);
+    }
+
+    .case-body { grid-column: span 4; }
+
+    .case-title {
+      color: var(--n950);
+    }
+
+    .case-line {
+      margin-top: 14px;
+      color: var(--n600);
+    }
+
+    .case-role {
+      margin-top: 10px;
+      color: var(--n500);
+    }
+
+    .recognition {
+      margin-top: 10px;
+      display: grid;
+      row-gap: 2px;
+      color: var(--n400);
+      transition: color 160ms ease;
+    }
+
+    .case-row.is-active .recognition {
+      color: var(--black);
+    }
+
+    .case-media { grid-column: 8 / span 5; }
+
+    .video-frame {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      overflow: hidden;
+      background: var(--n100);
+      opacity: 0.82;
+      transition: opacity 300ms ease, background-color 300ms ease;
+    }
+
+    .case-row.is-active .video-frame {
+      opacity: 1;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: none;
+      opacity: 0;
+      transition: opacity 240ms ease;
+    }
+
+    .video-frame.is-loaded iframe {
+      opacity: 1;
+    }
+
+    .open-theater {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      display: block;
+      width: 100%;
+      height: 100%;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .open-theater:focus-visible {
+      outline: 1px solid var(--black);
+      outline-offset: -4px;
+    }
+
+    .mlm-row .case-number,
+    .mlm-row .recognition {
+      color: var(--n500);
+    }
+
+    .mlm-space {
+      display: grid;
+      aspect-ratio: 16 / 9;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      column-gap: var(--gap);
+      align-content: start;
+      padding-top: 32px;
+    }
+
+    .mlm-cta {
+      grid-column: 2 / span 4;
+      width: fit-content;
+      color: var(--n600);
+      transition: color 160ms ease;
+    }
+
+    .mlm-cta:hover,
+    .mlm-cta:focus-visible {
+      color: var(--black);
+    }
+
+    .mlm-arrow {
+      display: inline-block;
+      transition: transform 160ms ease;
+    }
+
+    .mlm-cta:hover .mlm-arrow,
+    .mlm-cta:focus-visible .mlm-arrow {
+      transform: translate(2px, -2px);
+    }
+
+    .theater-grid {
+      min-height: 100svh;
+      align-content: center;
+      row-gap: 32px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+      color: white;
+    }
+
+    .theater-label { grid-column: span 2; }
+
+    .close-theater {
+      grid-column: 10 / span 3;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .close-theater button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+      color: var(--n400);
+      font-size: 12px;
+      transition: color 160ms ease;
+    }
+
+    .close-theater button:hover,
+    .close-theater button:focus-visible {
+      color: white;
+    }
+
+    .theater-video {
+      grid-column: 3 / span 8;
+    }
+
+    .theater-video .video-frame {
+      opacity: 1;
+      background: var(--n900);
+    }
+
+    .theater-meta-left { grid-column: 4 / span 3; }
+    .theater-meta-right { grid-column: 7 / span 3; }
+    .theater-meta-left .case-number { color: var(--n500); }
+    .theater-meta-left .case-title { margin-top: 12px; color: white; }
+    .theater-meta-left .case-line { margin-top: 12px; color: var(--n400); }
+    .theater-meta-right .case-role { margin-top: 0; color: var(--n500); }
+    .theater-meta-right .recognition { color: var(--n400); }
+
+    #ways .grid {
+      row-gap: 40px;
+      padding-top: 32px;
+      padding-bottom: 172px;
+    }
+
+    #ways .label-wrap { grid-column: span 2; }
+    #ways .ways-head { grid-column: 4 / span 3; }
+
+    .ways-list {
+      grid-column: span 12;
+      display: contents;
+    }
+
+    .way-item:nth-child(1) { grid-column: 4 / span 2; grid-row-start: 2; }
+    .way-item:nth-child(2) { grid-column: 7 / span 2; grid-row-start: 2; }
+    .way-item:nth-child(3) { grid-column: 10 / span 2; grid-row-start: 2; }
+
+    .way-title {
+      margin: 0 0 14px;
+    }
+
+    .way-text {
+      color: var(--n600);
+    }
+
+    footer .grid {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    .footer-copy {
+      grid-column: span 3;
+      color: var(--n500);
+    }
+
+    .footer-links {
+      grid-column: 8 / span 5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 20px;
+      color: var(--n500);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      :root { --gutter: 24px; --gap: 24px; }
+
+      .header-grid {
+        padding-top: 24px;
+        padding-bottom: 0;
+      }
+
+      .brand { grid-column: span 12; }
+      .clock { display: none; }
+
+      .mobile-header-line {
+        grid-column: span 12;
+        margin-left: calc(var(--gutter) * -1);
+        margin-right: calc(var(--gutter) * -1);
+        margin-top: 20px;
+        border-top: 1px solid var(--n200);
+      }
+
+      .nav {
+        grid-column: span 12;
+        justify-content: flex-start;
+        min-height: 44px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      #top .grid { min-height: 76vh; }
+
+      #top .label-wrap,
+      #top .hero-line,
+      #top .modes,
+      #top .description,
+      #signal .label-wrap,
+      #signal .signal-line,
+      #signal .signal-note {
+        grid-column: span 12;
+      }
+
+      .proof-label { grid-column: span 12; }
+
+      .case-row {
+        min-height: 0;
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+
+      .case-text,
+      .case-media { grid-column: span 12; }
+
+      .theater-label { grid-column: span 6; }
+      .close-theater { grid-column: 7 / span 6; }
+      .theater-video { grid-column: span 12; }
+      .theater-meta-left,
+      .theater-meta-right { grid-column: span 12; }
+
+      #ways .grid { padding-bottom: 156px; }
+      #ways .label-wrap,
+      #ways .ways-head { grid-column: span 12; }
+
+      .ways-list {
+        grid-column: span 12;
+        display: grid;
+        row-gap: 0;
+      }
+
+      .way-item {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: var(--gap);
+        border-top: 1px solid var(--n200);
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      .way-item:nth-child(1),
+      .way-item:nth-child(2),
+      .way-item:nth-child(3) {
+        grid-column: span 12;
+        grid-row-start: auto;
+      }
+
+      .way-title {
+        grid-column: span 1;
+        margin: 0;
+      }
+
+      .way-text { grid-column: span 3; }
+      .footer-copy { grid-column: span 12; }
+
+      .footer-links {
+        grid-column: span 12;
+        justify-content: flex-start;
+        margin-top: 3px;
+      }
+    }
+
+    @media (max-width: 639px) {
+      :root { --gutter: 16px; --gap: 16px; }
+
+      .header-grid { padding-top: 20px; }
+      .mobile-header-line { margin-top: 20px; }
+
+      #top .grid {
+        min-height: 70vh;
+        row-gap: 40px;
+        padding-top: 56px;
+        padding-bottom: 48px;
+      }
+
+      #signal .grid {
+        row-gap: 40px;
+        padding-top: 64px;
+        padding-bottom: 56px;
+      }
+
+      .proof-grid {
+        padding-top: 40px;
+        padding-bottom: 24px;
+      }
+
+      #ways .grid {
+        row-gap: 32px;
+        padding-top: 24px;
+        padding-bottom: 112px;
+      }
+
+      footer .grid {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="grid header-grid">
+      <a href="#top" class="brand settle-1">
+        <span class="brand-name">Miguel Castro</span>
+        <span class="brand-role">Senior creative partner</span>
+      </a>
+
+      <div class="clock settle-2" id="world-clock">
+        <p id="clock-main" class="clock-crossfade">New York 00:00</p>
+        <p class="clock-sub">
+          <span class="clock-default">Time matters</span>
+          <span class="clock-hover">Available across time zones</span>
+        </p>
+      </div>
+
+      <div class="mobile-header-line"></div>
+
+      <nav aria-label="Primary navigation" class="nav settle-3">
+        <a class="micro-link nav-link" href="#cases" data-nav-section="cases">Proof</a>
+        <span class="nav-sep">|</span>
+        <a class="micro-link nav-link" href="#ways" data-nav-section="ways">Bring Me In</a>
+        <span class="nav-sep">|</span>
+        <a class="micro-link" href="/about">About</a>
+        <span class="nav-sep">|</span>
+        <a class="micro-link" href="mailto:miguel@miguelcastro.cc">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top">
+    <div class="grid">
+      <div class="label-wrap settle-1">
+        <p class="label">Private Practice</p>
+      </div>
+
+      <div class="hero-line settle-2">
+        <p class="text-14">For the distance between a strong idea and a real one.</p>
+      </div>
+
+      <div class="modes settle-3">
+        <p class="text-12">Projects<br />Seasons<br />Embedded roles</p>
+      </div>
+
+      <div class="description settle-3">
+        <p class="text-12">I work with agencies, brands and creative teams to find the tension, shape the idea, build belief and carry high-potential work until it becomes real.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section id="signal">
+    <div class="grid">
+      <div class="label-wrap">
+        <p class="label">Signal</p>
+      </div>
+
+      <div class="signal-line">
+        <p class="text-14">From accessibility interfaces to invisible digital waste, hidden abuse, faster payments and AI-assisted judgment, work recognized by Cannes Lions and the Effies Awards.</p>
+      </div>
+
+      <div class="signal-note">
+        <p class="text-12">Selected proof lives below.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section id="cases" aria-expanded="false">
+    <div id="cases-normal" class="grid proof-grid">
+      <div class="proof-label">
+        <p class="label">Selected Proof</p>
+      </div>
+
+      <div class="case-list" id="case-list"></div>
+    </div>
+
+    <div id="cases-theater" class="grid theater-grid" role="dialog" aria-label="Theater view" hidden style="display:none;"></div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section id="ways">
+    <div class="grid">
+      <div class="label-wrap">
+        <p class="label">Bring Me In</p>
+      </div>
+
+      <div class="ways-head">
+        <h2 class="text-14">Bring me in for a project, a season or a role inside the room.</h2>
+      </div>
+
+      <div class="ways-list">
+        <div class="way-item">
+          <h3 class="way-title">Project</h3>
+          <p class="way-text">One idea, pitch, case, campaign, product or problem that needs sharper creative judgment.</p>
+        </div>
+
+        <div class="way-item">
+          <h3 class="way-title">Season</h3>
+          <p class="way-text">A defined period of creative development, pitch work, platform building or idea accompaniment.</p>
+        </div>
+
+        <div class="way-item">
+          <h3 class="way-title">Embedded</h3>
+          <p class="way-text">Senior creative leadership inside the room, full-time or close to it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <footer id="contact">
+    <div class="grid footer">
+      <p class="footer-copy">Miguel Castro @2026</p>
+
+      <div class="footer-links">
+        <a class="micro-link" href="mailto:miguel@miguelcastro.cc">Contact</a>
+        <a class="micro-link" href="https://www.linkedin.com/in/miguelcastroe/" rel="noopener">LinkedIn</a>
+        <a class="micro-link" href="https://miguelcastro.works/" rel="noopener">Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cases = [
+      {
+        number: "01",
+        name: "MouthPad^",
+        line: "Accessibility as interface evolution.",
+        role: "Creative direction, concept development, creative technology logic, case narrative.",
+        recognition: [
+          "Cannes Lions Innovation Grand Prix",
+          "Cannes Lions Health Silver",
+          "Cannes Lions Titanium Shortlist",
+          "Other categories: 12 shortlists"
+        ],
+        vimeoId: "951744690",
+        hasVideo: true
+      },
+      {
+        number: "02",
+        name: "Vanishing Emails",
+        line: "Invisible digital waste made visible and actionable.",
+        role: "Concept development, creative strategy, technology logic, case building.",
+        recognition: [
+          "Cannes Lions Innovation Bronze",
+          "Cannes Lions SDGs Shortlist",
+          "Other categories: 5 shortlists"
+        ],
+        vimeoId: "951723906",
+        hasVideo: true
+      },
+      {
+        number: "03",
+        name: "Behind the Fear",
+        line: "Hidden abuse made discoverable through ordinary digital traces.",
+        role: "Concept development, interaction logic, narrative structure, creative direction.",
+        recognition: [
+          "Cannes Lions SDGs Shortlist",
+          "Cannes Lions Health Shortlist",
+          "Cannes Lions PR Shortlist"
+        ],
+        vimeoId: "1035621612",
+        hasVideo: true
+      },
+      {
+        number: "04",
+        name: "En One",
+        line: "A technical benefit turned into a reason to trust.",
+        role: "Creative strategy, campaign idea, product-benefit translation, brand narrative.",
+        recognition: [
+          "Latin American Effie Business-to-Business Gold",
+          "Local Effie Business Innovation Gold",
+          "Local Effie Business-to-Business Silver",
+          "Local Effie Service Line Extension Bronze"
+        ],
+        vimeoId: "1071593465",
+        hasVideo: true
+      },
+      {
+        number: "05",
+        name: "Miguel’s Language Model",
+        line: "An original IP for judgment before output. Built to catch fluent work before it starts sounding true.",
+        role: "Creator, research, writing, framework design, AI-assisted creative practice.",
+        recognition: "Practice layer and essay",
+        hasVideo: false
+      }
+    ];
+
+    function recognitionMarkup(value) {
+      const lines = Array.isArray(value) ? value : [value];
+      return lines.map((line) => `<p>${line}</p>`).join("");
+    }
+
+    function vimeoEmbedUrl(id, theaterMode = false) {
+      const params = new URLSearchParams({
+        title: "0",
+        byline: "0",
+        portrait: "0",
+        badge: "0",
+        autopause: "0",
+        transparent: "0",
+        dnt: "1",
+        muted: "1",
+        loop: "1",
+        controls: theaterMode ? "1" : "0",
+        autoplay: theaterMode ? "1" : "0"
+      });
+
+      return `https://player.vimeo.com/video/${id}?${params.toString()}`;
+    }
+
+    function videoFrame(item, theaterMode = false) {
+      return `
+        <div class="video-frame">
+          <iframe
+            title="${item.name} video"
+            src="${vimeoEmbedUrl(item.vimeoId, theaterMode)}"
+            allow="autoplay; fullscreen; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="${theaterMode ? "eager" : "lazy"}"
+            allowfullscreen>
+          </iframe>
+          ${theaterMode ? "" : `<button type="button" class="open-theater" aria-label="Open ${item.name} in theater mode" data-open-theater="${item.number}"></button>`}
+        </div>
+      `;
+    }
+
+    function renderCases() {
+      const list = document.getElementById("case-list");
+
+      list.innerHTML = cases.map((item, index) => {
+        const recognition = `<div class="recognition">${recognitionMarkup(item.recognition)}</div>`;
+
+        if (!item.hasVideo) {
+          return `
+            <div class="case-row mlm-row" id="mlm" data-case-index="${index}">
+              <div class="case-text">
+                <div class="case-number">${item.number}</div>
+                <div class="case-body">
+                  <h2 class="case-title">${item.name}</h2>
+                  <p class="case-line text-12">${item.line}</p>
+                  <p class="case-role text-12">Role: ${item.role}</p>
+                  ${recognition}
+                </div>
+              </div>
+
+              <div class="case-media">
+                <div class="mlm-space">
+                  <a class="mlm-cta text-12" href="https://private.miguelcastro.works/">Read the argument. Then disagree with it. <span class="mlm-arrow">↗</span></a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        return `
+          <div class="case-row" data-case-index="${index}">
+            <div class="case-text">
+              <div class="case-number">${item.number}</div>
+              <div class="case-body">
+                <h2 class="case-title">${item.name}</h2>
+                <p class="case-line text-12">${item.line}</p>
+                <p class="case-role text-12">Role: ${item.role}</p>
+                ${recognition}
+              </div>
+            </div>
+
+            <div class="case-media">
+              ${videoFrame(item, false)}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    let lastTheaterIndex = null;
+
+    function setUpVideoLoading(scope = document) {
+      const iframes = Array.from(scope.querySelectorAll(".video-frame iframe"));
+
+      iframes.forEach((iframe) => {
+        const frame = iframe.closest(".video-frame");
+        if (!frame) return;
+
+        iframe.addEventListener("load", () => {
+          frame.classList.add("is-loaded");
+        }, { once: true });
+      });
+    }
+
+    function renderTheater(index) {
+      const item = cases[index];
+      lastTheaterIndex = index;
+      const casesSection = document.getElementById("cases");
+      const normal = document.getElementById("cases-normal");
+      const theater = document.getElementById("cases-theater");
+
+      casesSection.classList.add("theater");
+      casesSection.setAttribute("aria-expanded", "true");
+      normal.hidden = true;
+      normal.style.display = "none";
+      theater.hidden = false;
+      theater.style.display = "grid";
+
+      theater.innerHTML = `
+        <div class="theater-label">
+          <p class="label" style="color: var(--n400);">Selected Proof</p>
+        </div>
+
+        <div class="close-theater">
+          <button type="button" id="close-theater">Close theater view <sup>X</sup></button>
+        </div>
+
+        <div class="theater-video">
+          ${videoFrame(item, true)}
+        </div>
+
+        <div class="theater-meta-left">
+          <p class="case-number">${item.number}</p>
+          <h2 class="case-title">${item.name}</h2>
+          <p class="case-line text-12">${item.line}</p>
+        </div>
+
+        <div class="theater-meta-right">
+          <p class="case-role text-12">Role: ${item.role}</p>
+          <div class="recognition">${recognitionMarkup(item.recognition)}</div>
+        </div>
+      `;
+
+      document.getElementById("close-theater").addEventListener("click", closeTheater);
+      setUpVideoLoading(theater);
+      casesSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function closeTheater() {
+      const casesSection = document.getElementById("cases");
+      const normal = document.getElementById("cases-normal");
+      const theater = document.getElementById("cases-theater");
+
+      casesSection.classList.remove("theater");
+      casesSection.setAttribute("aria-expanded", "false");
+      theater.hidden = true;
+      theater.style.display = "none";
+      theater.innerHTML = "";
+      normal.hidden = false;
+      normal.style.display = "grid";
+
+      if (lastTheaterIndex !== null) {
+        const row = document.querySelector(`[data-case-index="${lastTheaterIndex}"]`);
+        if (row) row.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    function setUpTheaterClicks() {
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-open-theater]");
+        if (!button) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const number = button.getAttribute("data-open-theater");
+        const index = cases.findIndex((item) => item.number === number);
+        if (index >= 0) renderTheater(index);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeTheater();
+      });
+
+      document.addEventListener("click", (event) => {
+        const casesSection = document.getElementById("cases");
+        const theater = document.getElementById("cases-theater");
+
+        if (!casesSection.classList.contains("theater")) return;
+        if (!event.target.closest("#cases-theater")) return;
+        if (event.target.closest(".theater-video, .close-theater")) return;
+
+        closeTheater();
+      });
+    }
+
+    function setUpSectionRules() {
+      const rules = document.querySelectorAll(".section-rule");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("is-visible");
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      rules.forEach((rule) => observer.observe(rule));
+    }
+
+    function setUpActiveNav() {
+      const navLinks = Array.from(document.querySelectorAll("[data-nav-section]"));
+      const sections = Array.from(document.querySelectorAll("section[id], footer[id]"));
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            navLinks.forEach((link) => {
+              const isActive = link.dataset.navSection === entry.target.id;
+              link.classList.toggle("active", isActive);
+              if (isActive) {
+                link.setAttribute("aria-current", "page");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
+          });
+        },
+        { rootMargin: "-42% 0px -52% 0px", threshold: 0.01 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    }
+
+    function setUpActiveCases() {
+      const caseRows = Array.from(document.querySelectorAll("[data-case-index]"));
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            caseRows.forEach((row) => row.classList.remove("is-active"));
+            entry.target.classList.add("is-active");
+          });
+        },
+        { rootMargin: "-35% 0px -50% 0px", threshold: 0.01 }
+      );
+
+      caseRows.forEach((row) => observer.observe(row));
+      if (caseRows[0]) caseRows[0].classList.add("is-active");
+    }
+
+    function setUpClock() {
+      const cities = [
+        { label: "New York", timeZone: "America/New_York" },
+        { label: "Miami", timeZone: "America/New_York" },
+        { label: "Los Angeles", timeZone: "America/Los_Angeles" },
+        { label: "San José", timeZone: "America/Costa_Rica" },
+        { label: "Mexico City", timeZone: "America/Mexico_City" },
+        { label: "São Paulo", timeZone: "America/Sao_Paulo" },
+        { label: "London", timeZone: "Europe/London" },
+        { label: "Madrid", timeZone: "Europe/Madrid" },
+        { label: "Tokyo", timeZone: "Asia/Tokyo" }
+      ];
+
+      const clock = document.getElementById("clock-main");
+      let cityIndex = 0;
+
+      function getCityTime(city) {
+        return new Intl.DateTimeFormat("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZone: city.timeZone
+        }).format(new Date());
+      }
+
+      function renderClock(animate = true) {
+        const city = cities[cityIndex];
+        const nextText = `${city.label} ${getCityTime(city)}`;
+
+        if (clock.textContent === nextText) return;
+
+        if (!animate) {
+          clock.textContent = nextText;
+          return;
+        }
+
+        clock.classList.remove("clock-crossfade");
+        void clock.offsetWidth;
+        clock.textContent = nextText;
+        clock.classList.add("clock-crossfade");
+      }
+
+      renderClock(false);
+
+      setInterval(() => {
+        cityIndex = (cityIndex + 1) % cities.length;
+        renderClock(true);
+      }, 3000);
+    }
+
+    renderCases();
+    setUpVideoLoading();
+    setUpTheaterClicks();
+    setUpSectionRules();
+    setUpActiveNav();
+    setUpActiveCases();
+    setUpClock();
+  </script>
+</body>
+</html>
